@@ -1,13 +1,13 @@
 {
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "export": "next export"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "next": "^10.0.0",
-    "nextjs-basic-auth": "^0.1.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },

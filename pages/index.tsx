@@ -1,28 +1,17 @@
-import initializeBasicAuth from 'nextjs-basic-auth'
+import Link from 'next/link'
 
-const users = [{ password: 'test', user: 'test' }]
-const basicAuthCheck = initializeBasicAuth({ users })
-
-export async function getServerSideProps(ctx) {
-  const { req, res } = ctx
-
-  try {
-    console.log('try')
-    basicAuthCheck(req, res)
-  } catch (e) {
-    console.log('err')
-    console.log({ e })
-  }
-
-  return {
-    props: {},
-  }
-}
-
-const Page = () => {
+const Page = (props) => {
   return (
     <>
       <div>page</div>
+      <Link href="/articles">
+        <a>articles</a>
+      </Link>
+      <br />
+      <br />
+      <Link href="/test">
+        <a>test</a>
+      </Link>
     </>
   )
 }
